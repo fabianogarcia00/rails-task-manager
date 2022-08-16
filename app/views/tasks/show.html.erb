@@ -2,4 +2,11 @@
 
 <p><%= @task.details %></p>
 
+<%= link_to 'Edit this task', edit_task_path(@task) %>
+
+<%= link_to 'Delete', task_path(@task), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+
 <%= link_to 'Back to list', tasks_path %>
+
+
+<%#= link_to 'delete', restaurant_path(@restaurant), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
